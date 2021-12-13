@@ -5,11 +5,17 @@ import { Feather } from '@expo/vector-icons'
 
 import { Container, ViewLogo, Logo, ViewInputEmail, BoxIcon, InputText, 
   ViewInputSenha, ButtonLogin, TextButton, ResetPassword, TextReset, Buttons } from './stylesLogin'
+import StatusBarPage from '../Components/StatusBarPage/statusBar'
 
 export default function Login(){
   return(
     
   <Container>
+    <StatusBarPage
+      barStyle="dark-content"
+      backgroundColor='#fff'
+    />
+
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
         <KeyboardAvoidingView  
           behavior={Platform.OS === 'android' ? 'padding' : 'position'}
