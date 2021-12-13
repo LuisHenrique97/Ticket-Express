@@ -2,8 +2,9 @@ import React from "react";
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import { Ionicons } from '@expo/vector-icons'
 
-import Home from "../Home/home";
-import Login from "../Login/login";
+import Home from '../Pages/Home/home'
+import Login from '../Pages/Login/login'
+import Stackroutes from './Stackroutes'
 
 const Drawer = createDrawerNavigator()
 
@@ -27,7 +28,7 @@ export default function Routes(){
             }}
         >
             <Drawer.Screen 
-                name="Home" component={Home}
+                name="Eventos" component={Stackroutes}
                 options={{
                     drawerIcon: ({focused, size, color}) => (
                         <Ionicons 
@@ -39,6 +40,7 @@ export default function Routes(){
                     headerShown: false
                 }}    
             />
+
             <Drawer.Screen 
                 name="Login" component={Login}
                 options={{

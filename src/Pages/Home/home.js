@@ -2,9 +2,9 @@ import React, {useState} from 'react'
 import { View, Text, FlatList, SafeAreaView, StyleSheet } from 'react-native'
 import { Feather } from '@expo/vector-icons'
 
-import Menu from '../Components/Menu/menu'
-import Lista from '../Components/Lista/lista'
-import StatusBarPage from '../Components/StatusBarPage/statusBar'
+import Menu from '../../Components/Menu/menu'
+import Lista from '../../Components/Lista/lista'
+import StatusBarPage from '../../Components/StatusBarPage/statusBar'
 
 import { Container, Texto, ViewLogo, Logo, TextHome, BoxIcon, InputText, ViewInputSearch } from './stylesHome'
 
@@ -12,34 +12,34 @@ export default function Home(){
 
   const [ lista, setList] = useState([
     {
-      id: 1, nome: 'A Triade', data: '10/12/2021', 
+      id: 1, nome: 'O Pior Ano', data: '10/12/2021', 
       hora: '21:30', local: 'Chevrolet Hall', valor: '150,00',
-      imagem: require('../assets/Ticket.png')
+      imagem: require('../../assets/Ticket.png')
     },
     {
-      id: 2, nome: 'A Triade', data: '10/12/2021',
+      id: 2, nome: 'Saia do Caixão', data: '10/12/2021',
       hora: '21:30', local: 'Chevrolet Hall', valor: '150,00',
-      imagem: require('../assets/Ticket.png')
+      imagem: require('../../assets/Ticket.png')
     },
     {
-      id: 3, nome: 'A Triade', data: '10/12/2021',
+      id: 3, nome: 'Metodo IP', data: '10/12/2021',
       hora: '21:30', local: 'Chevrolet Hall', valor: '150,00',
-      imagem: require('../assets/Ticket.png')
+      imagem: require('../../assets/Ticket.png')
     },
     {
       id: 4, nome: 'A Triade', data: '10/12/2021',
       hora: '21:30', local: 'Chevrolet Hall', valor: '150,00',
-      imagem: require('../assets/Ticket.png')
+      imagem: require('../../assets/Ticket.png')
     },
     {
-      id: 5, nome: 'A Triade', data: '10/12/2021',
+      id: 5, nome: 'Clube 459', data: '10/12/2021',
       hora: '21:30', local: 'Chevrolet Hall', valor: '150,00',
-      imagem: require('../assets/Ticket.png')
+      imagem: require('../../assets/Ticket.png')
     },
     {
       id: 6, nome: 'A Triade', data: '10/12/2021',
       hora: '21:30', local: 'Chevrolet Hall', valor: '150,00',
-      imagem: require('../assets/Ticket.png')
+      imagem: require('../../assets/Ticket.png')
     }
   ])
 
@@ -54,7 +54,7 @@ export default function Home(){
       <Menu/>
 
       <ViewLogo>
-        <Logo source={require('../assets/TicketLogo.png')} resizeMode="contain"/>
+        <Logo source={require('../../assets/TicketLogo.png')} resizeMode="contain"/>
       </ViewLogo>
 
       <ViewInputSearch>
@@ -71,7 +71,7 @@ export default function Home(){
         <FlatList 
           data={lista}
           horizontal
-          renderItem={({item}) => <Lista data={item}/>}
+          renderItem={({item}) => <Lista data={item} />}
           showsHorizontalScrollIndicator={false}
         />
       </View>

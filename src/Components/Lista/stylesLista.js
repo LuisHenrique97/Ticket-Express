@@ -3,8 +3,6 @@ import styled from "styled-components/native";
 export const Container = styled.View`
     margin: 20px;
     border-radius: 8px;
-    align-items: center;
-    justify-content: center;
 `;
 
 export const Banner = styled.Image`
@@ -18,7 +16,7 @@ export const Banner = styled.Image`
 `;
 
 export const ViewEvent = styled.TouchableOpacity`
-   margin-left: -40%;
+   
 `;
 
 export const TextName = styled.Text`

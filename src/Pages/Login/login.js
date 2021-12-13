@@ -5,7 +5,7 @@ import { Feather } from '@expo/vector-icons'
 
 import { Container, ViewLogo, Logo, ViewInputEmail, BoxIcon, InputText, 
   ViewInputSenha, ButtonLogin, TextButton, ResetPassword, TextReset, Buttons } from './stylesLogin'
-import StatusBarPage from '../Components/StatusBarPage/statusBar'
+import StatusBarPage from '../../Components/StatusBarPage/statusBar'
 
 export default function Login(){
   return(
@@ -22,7 +22,7 @@ export default function Login(){
           enabled
         >
           <ViewLogo>
-            <Logo source={require('../assets/Ticket.png')} resizeMode="contain"/>
+            <Logo source={require('../../assets/Ticket.png')} resizeMode="contain"/>
           </ViewLogo>
 
           <ViewInputEmail>
