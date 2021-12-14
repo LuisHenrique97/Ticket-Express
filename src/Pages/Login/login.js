@@ -1,13 +1,18 @@
 import React from 'react'
 import { TouchableOpacity, TouchableWithoutFeedback, 
   Keyboard, KeyboardAvoidingView, Platform } from 'react-native'
+
 import { Feather } from '@expo/vector-icons'
+import { useNavigation } from '@react-navigation/native'
 
 import { Container, ViewLogo, Logo, ViewInputEmail, BoxIcon, InputText, 
   ViewInputSenha, ButtonLogin, TextButton, ResetPassword, TextReset, Buttons } from './stylesLogin'
 import StatusBarPage from '../../Components/StatusBarPage/statusBar'
 
 export default function Login(){
+  
+  const navigation = useNavigation()
+
   return(
     
   <Container>
@@ -38,7 +43,7 @@ export default function Login(){
               <Feather name="lock" size={22} color='#003459'/>
             </BoxIcon>
 
-            <InputText placeholder="Senha"/>
+            <InputText placeholder="Senha" secureTextEntry={true}/>
           </ViewInputSenha>
 
           <ResetPassword>
@@ -53,7 +58,7 @@ export default function Login(){
             <Buttons>Fazer login como empresa</Buttons>
           </TouchableOpacity>
           
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Conta')}>
             <Buttons>Criar conta</Buttons>
           </TouchableOpacity>
         

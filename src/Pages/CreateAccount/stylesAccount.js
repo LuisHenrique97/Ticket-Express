@@ -1,30 +1,30 @@
 import styled from "styled-components/native";
-import { Platform } from 'react-native';
 
 export const Container = styled.View`
     flex: 1;
-    background-color: #fff;
+    background-color: #007EA7;
     justify-content: center;
 `;
 
 export const ViewLogo = styled.View`
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     align-items: center;
 `;
 
 export const Logo = styled.Image`
-    height: 250px;
-    width: 250px;
+    height: 180px;
+    width: 180px;
 `;
 
-export const ViewInputEmail = styled.View`
+export const ViewInput = styled.View`
     align-items: center;
     flex-direction: row;
     width: 100%;
     border-radius: 7px;
     padding-left: 15px;
     padding-right: 15px;
+    margin-bottom: 20px;
 `;
 
 export const BoxIcon = styled.View`
@@ -38,7 +38,7 @@ export const BoxIcon = styled.View`
     border-top-width: 1px;
     border-left-width: 1px;
     border-bottom-width: 1px;
-    border-color: #003459;
+    border-color: #fff;
 `;
 
 export const InputText = styled.TextInput`
@@ -52,27 +52,17 @@ export const InputText = styled.TextInput`
     border-top-width: 1px;
     border-right-width: 1px;
     border-bottom-width: 1px;
-    border-color: #003459;
-    color: #003459;
+    border-color: #fff;
+    color: #fff; 
 `;
 
-export const ViewInputSenha = styled.View`
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    border-radius: 7px;
-    margin: 15px 0px;
-    padding-left: 15px;
-    padding-right: 15px;
-`;
-
-export const ButtonLogin = styled.TouchableOpacity`
+export const ButtonCreate = styled.TouchableOpacity`
     align-items: center;
     justify-content: center;
     background-color: #003459;
     height: 45px;
     margin: 0 15px;
-    margin-top: 50px;
+    margin-top: 15px;
     border-radius: 8px;
 `;
 
@@ -83,21 +73,9 @@ export const TextButton = styled.Text`
     color: #fff;
 `;
 
-export const ResetPassword = styled.TouchableOpacity`
-    align-items: flex-end;
-    margin: 0 15px;
-    margin-top: -10px;
-`;
-
-export const TextReset = styled.Text`
-    color: #003459;
-    font-size: 12px;
-`;
-
 export const Buttons = styled.Text`
-    color: #003459;
+    color: #fff;
     font-size: 12px;
     text-align: center;
     margin: 10px;
 `;
-
