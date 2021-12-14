@@ -47,10 +47,8 @@ export const Descripion = styled.Text`
 `;
 
 export const ViewBanner = styled.View`
-    background-color: #fff;
+    background-color: #a5a5a5;
     align-items: center;
-    background-color: #aaa;
-
 `;
 
 export const ViewDescripition = styled.View`
@@ -115,4 +113,53 @@ export const TextButtonOrg = styled.Text`
 
 export const ButtonOrg = styled.TouchableOpacity`
     
+`;
+
+export const ViewContainer = styled.View`
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+`;
+
+export const ViewModal = styled.View`
+    background-color: #007EA7;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+`;
+
+export const HeaderModal = styled.View`
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 25px;
+`;
+
+export const TextHeader = styled.Text`
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 30px;
+`;
+
+export const BannerModal = styled.Image`
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 8px;
+`;
+
+export const ModalDescription = styled.View`
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 250px;
+`;
+
+export const DescriptionText = styled.Text`
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 20px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 20px;
 `;

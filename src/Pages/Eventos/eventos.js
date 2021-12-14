@@ -1,13 +1,15 @@
-import React, { useState } from "react";
-import { ScrollView, Text, View } from 'react-native'
+import React, { useState, useRef } from "react";
+import { ScrollView, Text, View, Modal, TouchableWithoutFeedback } from 'react-native'
 
 import { Container, Header, HeaderButtom, Banner, EventName, 
     Descripion, ViewBanner, ViewDescripition, TextDescription, 
     ViewText, BoxIcon, Button, TextButton, ViewOrg, TextOrg,
-    TextButtonOrg, ButtonOrg } from "./stylesEventos";
+    TextButtonOrg, ButtonOrg, ViewModal, ViewContainer, 
+    HeaderModal, TextHeader, BannerModal, ModalDescription, DescriptionText } from "./stylesEventos";
 import { Feather } from '@expo/vector-icons'
 
 import { useNavigation } from '@react-navigation/native'
+import { Modalize } from "react-native-modalize";
 
 export default function Eventos({route}){
 
@@ -19,10 +21,17 @@ export default function Eventos({route}){
     const [local, setLocal] = useState(route.params.local)
     const [valor, setValor] = useState(route.params.valor)
 
+    const [ModalVisible, setModalVisible] = useState(false)
     const navigation = useNavigation()
+    const modalizeRef = useRef(null)
+
+    function onOpen(){
+        modalizeRef.current?.open()
+    }
 
     return(
         <Container>
+    
             <Header>
                 <HeaderButtom activeOpacity={0.7} onPress={() => navigation.goBack()}>
                     <Feather name="arrow-left" size={28} color='#fff'/>
@@ -87,7 +96,7 @@ export default function Eventos({route}){
 
             <ViewOrg>
                 <TextOrg>Evento organizado por</TextOrg>
-                <ButtonOrg>
+                <ButtonOrg onPress={onOpen}>
                     <TextButtonOrg>MBLABS</TextButtonOrg>
                 </ButtonOrg>
             </ViewOrg>
@@ -95,6 +104,35 @@ export default function Eventos({route}){
             <Button>
                 <TextButton>QUERO IR</TextButton>
             </Button>
+            
+           <Modalize ref={modalizeRef} snapPoint={405} modalHeight={405}>
+           <ViewContainer>
+                    <ViewModal>
+                        <HeaderModal>
+                            <BannerModal source={banner}/>
+                            <TextHeader>MBLABS</TextHeader>
+                        </HeaderModal>
+                        
+                        <ModalDescription>
+                            <ScrollView showsVerticalScrollIndicator={false}>
+                                <DescriptionText>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                                    It has survived not only five centuries, 
+                                    but also the leap into electronic typesetting, remaining essentially unchanged.
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                                    It has survived not only five centuries, 
+                                    but also the leap into electronic typesetting, remaining essentially unchanged.
+                                </DescriptionText>
+                            </ScrollView>
+                        </ModalDescription>
+                    </ViewModal>
+                </ViewContainer>
+           </Modalize>
+                    
             
         </Container>
     )
