@@ -2,9 +2,9 @@ import React from "react";
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import { Ionicons } from '@expo/vector-icons'
 
-import Home from '../Pages/Home/home'
 import Login from '../Pages/Login/login'
 import Stackroutes from './Stackroutes'
+import Profile from "../Pages/Profile/profile";
 
 const Drawer = createDrawerNavigator()
 
@@ -27,6 +27,22 @@ export default function Routes(){
                 }
             }}
         >
+
+            <Drawer.Screen 
+                name="Perfil" component={Profile}
+                options={{
+                    drawerIcon: ({focused, size, color}) => (
+                        <Ionicons 
+                            name={focused ? 'person' : 'person-outline'}
+                            color={color}
+                            size={size}
+                        />
+                    ),
+                    headerShown: false
+                }}    
+            />
+
+
             <Drawer.Screen 
                 name="Eventos" component={Stackroutes}
                 options={{
