@@ -11,12 +11,12 @@ import { Feather } from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native'
 import { Modalize } from "react-native-modalize";
 
-export default function Eventos({route}){
+export default function Eventos({route, data}){
 
     const [key, setKey] = useState(route.params.key)
     const [evento, setEvento] = useState(route.params.evento)
     const [banner, setBanner] = useState(route.params.banner)
-    const [data, setData] = useState(route.params.data)
+    const [date, setDate] = useState(route.params.data)
     const [hora, setHora] = useState(route.params.hora)
     const [local, setLocal] = useState(route.params.local)
     const [valor, setValor] = useState(route.params.valor)
@@ -67,7 +67,7 @@ export default function Eventos({route}){
                     <Feather name="calendar" size={22} color='#003459'/>
                 </BoxIcon>
 
-                <TextDescription>{data}</TextDescription>
+                <TextDescription>{date}</TextDescription>
             </ViewText>
 
             <ViewText>
@@ -101,7 +101,10 @@ export default function Eventos({route}){
                 </ButtonOrg>
             </ViewOrg>
 
-            <Button>
+            <Button onPress={() => navigation.navigate('Checkout', 
+                {evento: route.params.evento, local: route.params.local,
+                 data: route.params.data, hora: route.params.hora, valor: route.params.valor
+                })}>
                 <TextButton>QUERO IR</TextButton>
             </Button>
             

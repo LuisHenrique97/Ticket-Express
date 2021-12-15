@@ -13,32 +13,32 @@ export default function Home(){
   const [ lista, setList] = useState([
     {
       id: 1, nome: 'O Pior Ano', data: '10/12/2021', 
-      hora: '21:30', local: 'Chevrolet Hall', valor: '150,00',
+      hora: '21:30', local: 'YouTube', valor: '150,00',
       imagem: require('../../assets/Ticket.png')
     },
     {
       id: 2, nome: 'Saia do Caixão', data: '10/12/2021',
-      hora: '21:30', local: 'Chevrolet Hall', valor: '150,00',
+      hora: '21:30', local: 'Allianz Park', valor: '250,00',
       imagem: require('../../assets/Ticket.png')
     },
     {
       id: 3, nome: 'Metodo IP', data: '10/12/2021',
-      hora: '21:30', local: 'Chevrolet Hall', valor: '150,00',
+      hora: '21:30', local: 'Plataforma Internacional', valor: '350,00',
       imagem: require('../../assets/Ticket.png')
     },
     {
       id: 4, nome: 'A Triade', data: '10/12/2021',
-      hora: '21:30', local: 'Chevrolet Hall', valor: '150,00',
+      hora: '21:30', local: 'Maracanã', valor: '450,00',
       imagem: require('../../assets/Ticket.png')
     },
     {
       id: 5, nome: 'Clube 459', data: '10/12/2021',
-      hora: '21:30', local: 'Chevrolet Hall', valor: '150,00',
+      hora: '21:30', local: 'Instagram', valor: '550,00',
       imagem: require('../../assets/Ticket.png')
     },
     {
       id: 6, nome: 'A Triade', data: '10/12/2021',
-      hora: '21:30', local: 'Chevrolet Hall', valor: '150,00',
+      hora: '21:30', local: 'Chevrolet Hall', valor: '650,00',
       imagem: require('../../assets/Ticket.png')
     }
   ])
