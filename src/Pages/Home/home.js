@@ -77,6 +77,8 @@ export default function Home(){
       </View>
 
       <TextHome>Novos Eventos</TextHome>
+      <TextHome>Novos Pessoas</TextHome>
+      <TextHome>Novos Ideias</TextHome>
 
       <View>
         <FlatList 
