@@ -76,7 +76,7 @@ export default function Home(){
         />
       </View>
 
-      <TextHome>Proximos Eventos</TextHome>
+      <TextHome>Novos Eventos</TextHome>
 
       <View>
         <FlatList 
