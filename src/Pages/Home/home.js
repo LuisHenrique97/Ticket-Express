@@ -67,6 +67,8 @@ export default function Home(){
 
       <TextHome>Destaques</TextHome>
 
+      <TextHome>Luis Henrique</TextHome>
+
       <View>
         <FlatList 
           data={lista}
